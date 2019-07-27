@@ -43,6 +43,7 @@
             this.ChoiceGroupBox = new System.Windows.Forms.GroupBox();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.BMITextBox = new System.Windows.Forms.TextBox();
+            this.MultlineTextBox = new System.Windows.Forms.TextBox();
             this.ImperialTableLayoutPanel.SuspendLayout();
             this.MetricTableLayoutPanel.SuspendLayout();
             this.ChoiceGroupBox.SuspendLayout();
@@ -194,7 +195,6 @@
             this.MetricRadioButton.Name = "MetricRadioButton";
             this.MetricRadioButton.Size = new System.Drawing.Size(69, 22);
             this.MetricRadioButton.TabIndex = 1;
-            this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
             this.MetricRadioButton.UseVisualStyleBackColor = true;
             this.MetricRadioButton.CheckedChanged += new System.EventHandler(this.MetricRadioButton_CheckedChanged);
@@ -234,12 +234,23 @@
             this.BMITextBox.Text = "0";
             this.BMITextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // MultlineTextBox
+            // 
+            this.MultlineTextBox.Enabled = false;
+            this.MultlineTextBox.Location = new System.Drawing.Point(69, 356);
+            this.MultlineTextBox.Multiline = true;
+            this.MultlineTextBox.Name = "MultlineTextBox";
+            this.MultlineTextBox.Size = new System.Drawing.Size(165, 56);
+            this.MultlineTextBox.TabIndex = 1;
+            this.MultlineTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // BMICalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.MultlineTextBox);
             this.Controls.Add(this.BMITextBox);
             this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.ChoiceGroupBox);
@@ -280,6 +291,7 @@
         private System.Windows.Forms.GroupBox ChoiceGroupBox;
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.TextBox BMITextBox;
+        private System.Windows.Forms.TextBox MultlineTextBox;
     }
 }
 

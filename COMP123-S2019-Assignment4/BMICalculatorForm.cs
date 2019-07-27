@@ -49,6 +49,11 @@ namespace COMP123_S2019_Assignment4
             WeightlbTextBox.Clear();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the HeightInTextBox TextChanged event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HeightInTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -62,6 +67,11 @@ namespace COMP123_S2019_Assignment4
             }
         }
 
+        /// <summary>
+        /// This is the Event Handler for the WeightlbTextBox TextChanged event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WeightlbTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -75,6 +85,11 @@ namespace COMP123_S2019_Assignment4
             }
         }
 
+        /// <summary>
+        /// This is the Event Handler for the HeightmTextBox TextChanged event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HeightmTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -88,6 +103,11 @@ namespace COMP123_S2019_Assignment4
             }
         }
 
+        /// <summary>
+        /// This is the Event Handler for the WeightkgTextBox TextChanged event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WeightkgTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -101,6 +121,11 @@ namespace COMP123_S2019_Assignment4
             }
         }
 
+        /// <summary>
+        /// This is the Event Handler for the CalculateButton Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             if (ImperialRadioButton.Checked == true)
@@ -119,6 +144,23 @@ namespace COMP123_S2019_Assignment4
                 OutputValue = 0.1f;
             }
             BMITextBox.Text = OutputValue.ToString();
+            if (OutputValue < 18.15)
+            {
+                MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n UnderWeight \n";
+            }
+            else if (OutputValue > 18.15 && OutputValue < 24.9)
+            {
+                MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n Normal \n";
+            }
+            else if (OutputValue > 25 && OutputValue < 29.9)
+            {
+                MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n Overweight \n";
+            }
+            else if (OutputValue > 30)
+            {
+                MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n Obese \n";
+            }
+            
         }
     }
 }
