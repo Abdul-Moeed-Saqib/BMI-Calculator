@@ -160,7 +160,6 @@ namespace COMP123_S2019_Assignment4
             {
                 MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n Obese \n";
             }
-            
         }
     }
 }

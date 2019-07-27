@@ -176,13 +176,11 @@
             // ImperialRadioButton
             // 
             this.ImperialRadioButton.AutoSize = true;
-            this.ImperialRadioButton.Checked = true;
             this.ImperialRadioButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImperialRadioButton.Location = new System.Drawing.Point(19, 25);
             this.ImperialRadioButton.Name = "ImperialRadioButton";
             this.ImperialRadioButton.Size = new System.Drawing.Size(81, 22);
             this.ImperialRadioButton.TabIndex = 1;
-            this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
             this.ImperialRadioButton.UseVisualStyleBackColor = true;
             this.ImperialRadioButton.CheckedChanged += new System.EventHandler(this.ImperialRadioButton_CheckedChanged);
@@ -190,11 +188,13 @@
             // MetricRadioButton
             // 
             this.MetricRadioButton.AutoSize = true;
+            this.MetricRadioButton.Checked = true;
             this.MetricRadioButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MetricRadioButton.Location = new System.Drawing.Point(19, 53);
             this.MetricRadioButton.Name = "MetricRadioButton";
             this.MetricRadioButton.Size = new System.Drawing.Size(69, 22);
             this.MetricRadioButton.TabIndex = 1;
+            this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
             this.MetricRadioButton.UseVisualStyleBackColor = true;
             this.MetricRadioButton.CheckedChanged += new System.EventHandler(this.MetricRadioButton_CheckedChanged);
@@ -237,10 +237,10 @@
             // MultlineTextBox
             // 
             this.MultlineTextBox.Enabled = false;
-            this.MultlineTextBox.Location = new System.Drawing.Point(69, 356);
+            this.MultlineTextBox.Location = new System.Drawing.Point(12, 356);
             this.MultlineTextBox.Multiline = true;
             this.MultlineTextBox.Name = "MultlineTextBox";
-            this.MultlineTextBox.Size = new System.Drawing.Size(165, 56);
+            this.MultlineTextBox.Size = new System.Drawing.Size(280, 73);
             this.MultlineTextBox.TabIndex = 1;
             this.MultlineTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
