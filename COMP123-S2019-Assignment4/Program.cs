@@ -15,7 +15,11 @@ namespace COMP123_S2019_Assignment4
         /// Program description: BMI Calculater application will measure body fat based on height and weight.
         /// 
         /// RevisionHistory:
-        ///
+        /// 1: added controls like Textboxes for user input, radio buttons to choose imperial or metric, and Calculate Button
+        /// 2: Users now can enter only numeric data in Height and Weight text boxes
+        /// 3: RadioButtons are now working for the users to choose between Imperial and Metric
+        /// 4: Calculate button is working to take data from weight and weight depending on whether its Imperial or Metric. It also takes the data and put it in BMI text box.
+        /// 
         /// </summary>
         [STAThread]
         static void Main()

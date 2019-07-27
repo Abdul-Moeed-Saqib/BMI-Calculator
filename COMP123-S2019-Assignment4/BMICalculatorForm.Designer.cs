@@ -33,7 +33,7 @@
             this.WeightlbLabel = new System.Windows.Forms.Label();
             this.HeightInTextBox = new System.Windows.Forms.TextBox();
             this.WeightlbTextBox = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.MetricTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HeightmTextBox = new System.Windows.Forms.TextBox();
             this.HeightmLabel = new System.Windows.Forms.Label();
             this.WeightkgLabel = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.CalculateButton = new System.Windows.Forms.Button();
             this.BMITextBox = new System.Windows.Forms.TextBox();
             this.ImperialTableLayoutPanel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.MetricTableLayoutPanel.SuspendLayout();
             this.ChoiceGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.HeightInLabel.AutoSize = true;
+            this.HeightInLabel.ForeColor = System.Drawing.Color.White;
             this.HeightInLabel.Location = new System.Drawing.Point(3, 0);
             this.HeightInLabel.Name = "HeightInLabel";
             this.HeightInLabel.Size = new System.Drawing.Size(121, 41);
@@ -85,6 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WeightlbLabel.AutoSize = true;
+            this.WeightlbLabel.ForeColor = System.Drawing.Color.White;
             this.WeightlbLabel.Location = new System.Drawing.Point(3, 41);
             this.WeightlbLabel.Name = "WeightlbLabel";
             this.WeightlbLabel.Size = new System.Drawing.Size(121, 42);
@@ -98,6 +100,7 @@
             this.HeightInTextBox.Name = "HeightInTextBox";
             this.HeightInTextBox.Size = new System.Drawing.Size(121, 32);
             this.HeightInTextBox.TabIndex = 1;
+            this.HeightInTextBox.TextChanged += new System.EventHandler(this.HeightInTextBox_TextChanged);
             // 
             // WeightlbTextBox
             // 
@@ -105,24 +108,25 @@
             this.WeightlbTextBox.Name = "WeightlbTextBox";
             this.WeightlbTextBox.Size = new System.Drawing.Size(121, 32);
             this.WeightlbTextBox.TabIndex = 1;
+            this.WeightlbTextBox.TextChanged += new System.EventHandler(this.WeightlbTextBox_TextChanged);
             // 
-            // tableLayoutPanel1
+            // MetricTableLayoutPanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.HeightmTextBox, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.HeightmLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.WeightkgLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.WeightkgTextBox, 1, 1);
-            this.tableLayoutPanel1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 117);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(254, 83);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.MetricTableLayoutPanel.ColumnCount = 2;
+            this.MetricTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.MetricTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.MetricTableLayoutPanel.Controls.Add(this.HeightmTextBox, 1, 0);
+            this.MetricTableLayoutPanel.Controls.Add(this.HeightmLabel, 0, 0);
+            this.MetricTableLayoutPanel.Controls.Add(this.WeightkgLabel, 0, 1);
+            this.MetricTableLayoutPanel.Controls.Add(this.WeightkgTextBox, 1, 1);
+            this.MetricTableLayoutPanel.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MetricTableLayoutPanel.Location = new System.Drawing.Point(20, 12);
+            this.MetricTableLayoutPanel.Name = "MetricTableLayoutPanel";
+            this.MetricTableLayoutPanel.RowCount = 2;
+            this.MetricTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.MetricTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.MetricTableLayoutPanel.Size = new System.Drawing.Size(254, 83);
+            this.MetricTableLayoutPanel.TabIndex = 0;
             // 
             // HeightmTextBox
             // 
@@ -130,6 +134,7 @@
             this.HeightmTextBox.Name = "HeightmTextBox";
             this.HeightmTextBox.Size = new System.Drawing.Size(121, 32);
             this.HeightmTextBox.TabIndex = 1;
+            this.HeightmTextBox.TextChanged += new System.EventHandler(this.HeightmTextBox_TextChanged);
             // 
             // HeightmLabel
             // 
@@ -137,6 +142,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.HeightmLabel.AutoSize = true;
+            this.HeightmLabel.ForeColor = System.Drawing.Color.White;
             this.HeightmLabel.Location = new System.Drawing.Point(3, 0);
             this.HeightmLabel.Name = "HeightmLabel";
             this.HeightmLabel.Size = new System.Drawing.Size(121, 41);
@@ -150,6 +156,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WeightkgLabel.AutoSize = true;
+            this.WeightkgLabel.ForeColor = System.Drawing.Color.White;
             this.WeightkgLabel.Location = new System.Drawing.Point(3, 41);
             this.WeightkgLabel.Name = "WeightkgLabel";
             this.WeightkgLabel.Size = new System.Drawing.Size(121, 42);
@@ -163,10 +170,12 @@
             this.WeightkgTextBox.Name = "WeightkgTextBox";
             this.WeightkgTextBox.Size = new System.Drawing.Size(121, 32);
             this.WeightkgTextBox.TabIndex = 1;
+            this.WeightkgTextBox.TextChanged += new System.EventHandler(this.WeightkgTextBox_TextChanged);
             // 
             // ImperialRadioButton
             // 
             this.ImperialRadioButton.AutoSize = true;
+            this.ImperialRadioButton.Checked = true;
             this.ImperialRadioButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImperialRadioButton.Location = new System.Drawing.Point(19, 25);
             this.ImperialRadioButton.Name = "ImperialRadioButton";
@@ -175,6 +184,7 @@
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
             this.ImperialRadioButton.UseVisualStyleBackColor = true;
+            this.ImperialRadioButton.CheckedChanged += new System.EventHandler(this.ImperialRadioButton_CheckedChanged);
             // 
             // MetricRadioButton
             // 
@@ -187,13 +197,15 @@
             this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
             this.MetricRadioButton.UseVisualStyleBackColor = true;
+            this.MetricRadioButton.CheckedChanged += new System.EventHandler(this.MetricRadioButton_CheckedChanged);
             // 
             // ChoiceGroupBox
             // 
             this.ChoiceGroupBox.Controls.Add(this.ImperialRadioButton);
             this.ChoiceGroupBox.Controls.Add(this.MetricRadioButton);
             this.ChoiceGroupBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChoiceGroupBox.Location = new System.Drawing.Point(53, 221);
+            this.ChoiceGroupBox.ForeColor = System.Drawing.Color.White;
+            this.ChoiceGroupBox.Location = new System.Drawing.Point(53, 117);
             this.ChoiceGroupBox.Name = "ChoiceGroupBox";
             this.ChoiceGroupBox.Size = new System.Drawing.Size(200, 100);
             this.ChoiceGroupBox.TabIndex = 2;
@@ -202,17 +214,20 @@
             // 
             // CalculateButton
             // 
-            this.CalculateButton.Location = new System.Drawing.Point(53, 338);
+            this.CalculateButton.BackColor = System.Drawing.Color.DarkRed;
+            this.CalculateButton.ForeColor = System.Drawing.Color.White;
+            this.CalculateButton.Location = new System.Drawing.Point(41, 239);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(218, 42);
             this.CalculateButton.TabIndex = 3;
             this.CalculateButton.Text = "Calculate BMI";
-            this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.UseVisualStyleBackColor = false;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // BMITextBox
             // 
             this.BMITextBox.Enabled = false;
-            this.BMITextBox.Location = new System.Drawing.Point(101, 386);
+            this.BMITextBox.Location = new System.Drawing.Point(88, 302);
             this.BMITextBox.Name = "BMITextBox";
             this.BMITextBox.Size = new System.Drawing.Size(121, 38);
             this.BMITextBox.TabIndex = 1;
@@ -223,11 +238,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(304, 441);
             this.Controls.Add(this.BMITextBox);
             this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.ChoiceGroupBox);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.MetricTableLayoutPanel);
             this.Controls.Add(this.ImperialTableLayoutPanel);
             this.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -238,8 +254,8 @@
             this.Text = "BMI Calculator";
             this.ImperialTableLayoutPanel.ResumeLayout(false);
             this.ImperialTableLayoutPanel.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.MetricTableLayoutPanel.ResumeLayout(false);
+            this.MetricTableLayoutPanel.PerformLayout();
             this.ChoiceGroupBox.ResumeLayout(false);
             this.ChoiceGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -254,7 +270,7 @@
         private System.Windows.Forms.Label HeightInLabel;
         private System.Windows.Forms.Label WeightlbLabel;
         private System.Windows.Forms.TextBox WeightlbTextBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel MetricTableLayoutPanel;
         private System.Windows.Forms.TextBox HeightmTextBox;
         private System.Windows.Forms.Label HeightmLabel;
         private System.Windows.Forms.Label WeightkgLabel;
