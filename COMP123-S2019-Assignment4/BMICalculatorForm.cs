@@ -161,5 +161,15 @@ namespace COMP123_S2019_Assignment4
                 MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n Obese \n";
             }
         }
+
+        /// <summary>
+        /// This is the Event Handler for BMICalculatorFOrm FormClosing event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BMICalculatorForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

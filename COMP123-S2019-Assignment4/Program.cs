@@ -8,6 +8,8 @@ namespace COMP123_S2019_Assignment4
 {
     static class Program
     {
+        public static Dictionary<string, Form> Forms;
+
         /// <summary>
         /// Name: Abdul Moeed Saqib
         /// Student ID: 301004138
@@ -20,6 +22,7 @@ namespace COMP123_S2019_Assignment4
         /// 3: RadioButtons are now working for the users to choose between Imperial and Metric
         /// 4: Calculate button is working to take data from weight and weight depending on whether its Imperial or Metric. It also takes the data and put it in BMI text box.
         /// 5: Fixed multiline Text Box that display BMI scale
+        /// 6: created a splash screen
         /// 
         /// </summary>
         [STAThread]
@@ -27,7 +30,12 @@ namespace COMP123_S2019_Assignment4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculatorForm());
+
+            Forms = new Dictionary<string, Form>();
+            Forms.Add("StartForm", new StartForm());
+            Forms.Add("BMICalculatorForm", new BMICalculatorForm());
+
+            Application.Run(Forms["StartForm"]);
         }
     }
 }

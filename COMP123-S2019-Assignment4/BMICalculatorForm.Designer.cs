@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.ImperialTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.HeightInTextBox = new System.Windows.Forms.TextBox();
             this.HeightInLabel = new System.Windows.Forms.Label();
             this.WeightlbLabel = new System.Windows.Forms.Label();
-            this.HeightInTextBox = new System.Windows.Forms.TextBox();
             this.WeightlbTextBox = new System.Windows.Forms.TextBox();
             this.MetricTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HeightmTextBox = new System.Windows.Forms.TextBox();
@@ -67,6 +67,14 @@
             this.ImperialTableLayoutPanel.Size = new System.Drawing.Size(254, 83);
             this.ImperialTableLayoutPanel.TabIndex = 0;
             // 
+            // HeightInTextBox
+            // 
+            this.HeightInTextBox.Location = new System.Drawing.Point(130, 3);
+            this.HeightInTextBox.Name = "HeightInTextBox";
+            this.HeightInTextBox.Size = new System.Drawing.Size(121, 32);
+            this.HeightInTextBox.TabIndex = 1;
+            this.HeightInTextBox.TextChanged += new System.EventHandler(this.HeightInTextBox_TextChanged);
+            // 
             // HeightInLabel
             // 
             this.HeightInLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -94,14 +102,6 @@
             this.WeightlbLabel.TabIndex = 0;
             this.WeightlbLabel.Text = "Weight(lb):";
             this.WeightlbLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // HeightInTextBox
-            // 
-            this.HeightInTextBox.Location = new System.Drawing.Point(130, 3);
-            this.HeightInTextBox.Name = "HeightInTextBox";
-            this.HeightInTextBox.Size = new System.Drawing.Size(121, 32);
-            this.HeightInTextBox.TabIndex = 1;
-            this.HeightInTextBox.TextChanged += new System.EventHandler(this.HeightInTextBox_TextChanged);
             // 
             // WeightlbTextBox
             // 
@@ -263,6 +263,7 @@
             this.Name = "BMICalculatorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculatorForm_FormClosing);
             this.ImperialTableLayoutPanel.ResumeLayout(false);
             this.ImperialTableLayoutPanel.PerformLayout();
             this.MetricTableLayoutPanel.ResumeLayout(false);
