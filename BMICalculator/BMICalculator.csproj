@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{04FF7635-59F6-427B-BDFD-7FBA6684C2BD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>COMP123_S2019_Assignment4</RootNamespace>
-    <AssemblyName>COMP123-S2019-Assignment4</AssemblyName>
+    <RootNamespace>BMICalculator</RootNamespace>
+    <AssemblyName>BMICalculator</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BMIlogo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -91,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BMI-Calculator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BMIlogo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

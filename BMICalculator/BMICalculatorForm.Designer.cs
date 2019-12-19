@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMICalculatorForm));
             this.ImperialTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HeightInTextBox = new System.Windows.Forms.TextBox();
             this.HeightInLabel = new System.Windows.Forms.Label();
@@ -290,6 +291,7 @@
             this.Controls.Add(this.ImperialTableLayoutPanel);
             this.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.MaximizeBox = false;
             this.Name = "BMICalculatorForm";
