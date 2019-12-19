@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP123_S2019_Assignment4
+namespace BMICalculator
 {
     public partial class BMICalculatorForm : Form
     {
@@ -134,9 +134,10 @@ namespace COMP123_S2019_Assignment4
             }
             else if (MetricRadioButton.Checked == true)
             {
-                Output = BMIFormulaMetric = (float.Parse(WeightkgTextBox.Text)) / (float.Parse(HeightmTextBox.Text) * float.Parse(HeightmTextBox.Text)); 
+                Output = BMIFormulaMetric = (float.Parse(WeightkgTextBox.Text)) / (float.Parse(HeightmTextBox.Text) * float.Parse(HeightmTextBox.Text));
             }
             BMITextBox.Text = Output.ToString();
+
             OutputValue = Output;
             OutputValue = (float)Math.Round(OutputValue, 1);
             if (OutputValue < 0.1f)
@@ -144,21 +145,34 @@ namespace COMP123_S2019_Assignment4
                 OutputValue = 0.1f;
             }
             BMITextBox.Text = OutputValue.ToString();
+
+            BMIScale();
+        }
+
+        /// <summary>
+        /// This method shows the result with the BMI scale
+        /// </summary>
+        private void BMIScale()
+        {
             if (OutputValue < 18.15)
             {
-                MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n UnderWeight \n";
+                MultlineTextBox.Text = OutputValue.ToString() + $"\n UnderWeight";
+                MultlineTextBox.BackColor = Color.Yellow;
             }
             else if (OutputValue > 18.15 && OutputValue < 24.9)
             {
-                MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n Normal \n";
+                MultlineTextBox.Text = OutputValue.ToString() + $"\n Normal";
+                MultlineTextBox.BackColor = Color.Green;
             }
             else if (OutputValue > 25 && OutputValue < 29.9)
             {
-                MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n Overweight \n";
+                MultlineTextBox.Text = OutputValue.ToString() + $"\n Overweight";
+                MultlineTextBox.BackColor = Color.Orange;
             }
             else if (OutputValue > 30)
             {
-                MultlineTextBox.Text = OutputValue.ToString() + $"{OutputValue} \n Obese \n";
+                MultlineTextBox.Text = OutputValue.ToString() + $" \n Obese";
+                MultlineTextBox.BackColor = Color.Red;
             }
         }
 
@@ -170,6 +184,41 @@ namespace COMP123_S2019_Assignment4
         private void BMICalculatorForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        /// <summary>
+        /// This is Event Handler for BMICalculatorForm Load event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BMICalculatorForm_Load(object sender, EventArgs e)
+        {
+            CalculateButton.Enabled = false;
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Are you sure you want to cancel?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirmResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        /// <summary>
+        /// This is Event Handler for ResetButton's Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            HeightmTextBox.Clear();
+            WeightkgTextBox.Clear();
+            HeightInTextBox.Clear();
+            WeightlbTextBox.Clear();
+            BMITextBox.Clear();
+            MultlineTextBox.Clear();
+            MultlineTextBox.BackColor = Color.White;
         }
     }
 }

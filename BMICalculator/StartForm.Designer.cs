@@ -1,4 +1,4 @@
-﻿namespace COMP123_S2019_Assignment4
+﻿namespace BMICalculator
 {
     partial class StartForm
     {
