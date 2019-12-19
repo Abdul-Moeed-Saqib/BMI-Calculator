@@ -79,8 +79,8 @@
             // 
             // HeightInLabel
             // 
-            this.HeightInLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.HeightInLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.HeightInLabel.AutoSize = true;
             this.HeightInLabel.ForeColor = System.Drawing.Color.White;
@@ -93,8 +93,8 @@
             // 
             // WeightlbLabel
             // 
-            this.WeightlbLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.WeightlbLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WeightlbLabel.AutoSize = true;
             this.WeightlbLabel.ForeColor = System.Drawing.Color.White;
@@ -141,8 +141,8 @@
             // 
             // HeightmLabel
             // 
-            this.HeightmLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.HeightmLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.HeightmLabel.AutoSize = true;
             this.HeightmLabel.ForeColor = System.Drawing.Color.White;
@@ -155,8 +155,8 @@
             // 
             // WeightkgLabel
             // 
-            this.WeightkgLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.WeightkgLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WeightkgLabel.AutoSize = true;
             this.WeightkgLabel.ForeColor = System.Drawing.Color.White;
@@ -241,7 +241,7 @@
             // 
             this.MultlineTextBox.Enabled = false;
             this.MultlineTextBox.ForeColor = System.Drawing.Color.Black;
-            this.MultlineTextBox.Location = new System.Drawing.Point(12, 477);
+            this.MultlineTextBox.Location = new System.Drawing.Point(12, 476);
             this.MultlineTextBox.Multiline = true;
             this.MultlineTextBox.Name = "MultlineTextBox";
             this.MultlineTextBox.Size = new System.Drawing.Size(280, 73);
